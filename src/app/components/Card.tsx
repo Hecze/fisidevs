@@ -36,10 +36,10 @@ const Card: React.FC<CardProps> = ({
 
             if (screenWidth < 1024 && sizeX > 1) {
                 newSizeX = 1;
-                newSizeY = Math.min(sizeY + (sizeX - 1), 3);
+                newSizeY = Math.min(sizeY + (sizeX - 1), 3) as 1 | 2 | 3;
             } else if (screenWidth < 1440 && sizeX > 2) {
                 newSizeX = 2;
-                newSizeY = Math.min(sizeY + (sizeX - 2), 3);
+                newSizeY = Math.min(sizeY + (sizeX - 2), 3) as 1 | 2 | 3;
             }
 
             setAdjustedSizeX(newSizeX);
