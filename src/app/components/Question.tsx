@@ -38,7 +38,7 @@ const Question: React.FC<QuestionProps> = ({
         <>
             <Button
                 onPress={onOpen}
-                className={`rounded-2xl text-white px-12 font-semibold tracking-wide h-14 text-lg ${className}`}
+                className={`rounded-2xl text-white px-12 font-semibold tracking-wide h-14 text-lg ${className} max-w-90vw`}
                 style={{ background: backgrounds[background], boxShadow: shadow_base }}
             >
                 {text}

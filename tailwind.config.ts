@@ -20,6 +20,10 @@ const config: Config = {
         '88': '22rem',
         '178': '46rem',
       },
+      maxWidth: {
+        '100vw': '100vw',
+        '90vw': '90vw',
+      },
       height: {
         '46': '11.5rem',
         '120': '30rem',

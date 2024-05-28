@@ -12,8 +12,8 @@ const AboutCards = () => {
           Software Academy
         </h1>
           <Card button="yellow" background="sky" showButton={false} sizeX={2}>
-            <div className="flex flex-row">
-              <div className="relative rounded-full mt-4 w-[19rem] h-32 overflow-hidden [background:linear-gradient(180deg,#49f9fc,#0d5db8)]">
+            <div className="flex flex-row p-8 justify-center align-center items-center">
+              <div className=" relative rounded-full mt-4 w-[20rem] h-32 overflow-hidden [background:linear-gradient(180deg,#49f9fc,#0d5db8)]">
                 <img
                   className="absolute bottom-0 inset-0 w-full h-auto object-cover rounded-full p-2"
                   alt="image"
@@ -21,7 +21,7 @@ const AboutCards = () => {
                 />
               </div>
               <div className="flex flex-col gap-4 mt-6 text-start ml-8">
-                <p className="text-sky-950 font-semibold">
+                <p className="text-sky-950 font-semibold text-sm">
                   Somos una comunidad académica sin fines de lucro potenciando talento de universitarios, egresados e interesados en Data Science, IA y Programación
                 </p>
                 <b className="self-stretch relative text-blue-800">
@@ -29,6 +29,7 @@ const AboutCards = () => {
                 </b>
               </div>
             </div>
+            
           </Card>
           <div className="flex flex-wrap ">
             <Card  button="yellow" sizeY={2}>

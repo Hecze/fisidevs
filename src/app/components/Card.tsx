@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import { Button } from "@nextui-org/button";
 
 interface CardProps {
@@ -24,6 +25,35 @@ const Card: React.FC<CardProps> = ({
     sizeX = 1,
     sizeY = 1
 }) => {
+    const [adjustedSizeX, setAdjustedSizeX] = useState(sizeX);
+    const [adjustedSizeY, setAdjustedSizeY] = useState(sizeY);
+
+    useEffect(() => {
+        const adjustSizes = () => {
+            const screenWidth = window.innerWidth;
+            let newSizeX = sizeX;
+            let newSizeY = sizeY;
+
+            if (screenWidth < 1024 && sizeX > 1) {
+                newSizeX = 1;
+                newSizeY = Math.min(sizeY + (sizeX - 1), 3);
+            } else if (screenWidth < 1440 && sizeX > 2) {
+                newSizeX = 2;
+                newSizeY = Math.min(sizeY + (sizeX - 2), 3);
+            }
+
+            setAdjustedSizeX(newSizeX);
+            setAdjustedSizeY(newSizeY);
+        };
+
+        adjustSizes();
+        window.addEventListener('resize', adjustSizes);
+
+        return () => {
+            window.removeEventListener('resize', adjustSizes);
+        };
+    }, [sizeX, sizeY]);
+
     const shadow_base = "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 1px #FFFFFF80 inset";
 
     const buttons = {
@@ -42,7 +72,7 @@ const Card: React.FC<CardProps> = ({
 
     return (
         <div
-            className={`${className} rounded-3xl ${widthClasses[sizeX - 1]} ${heightClasses[sizeY - 1]} flex flex-col items-center justify-center p-8 m-2`}
+            className={`${className} rounded-3xl ${widthClasses[adjustedSizeX - 1]} ${heightClasses[adjustedSizeY - 1]} flex flex-col items-center justify-center p-8 m-2  max-w-[96vw]`}
             style={{ background: backgrounds[background], boxShadow: shadow_base }}
         >
             <div className="flex w-full flex-col items-center justify-center">
@@ -57,10 +87,10 @@ const Card: React.FC<CardProps> = ({
             </div>
             {showButton && (
                 <Button
-                    className={`rounded-3xl text-white  w-4/5 font-semibold tracking-wide ${sizeY > 1 ? "h-20" : "h-16"}`}
+                    className={`rounded-3xl text-white  w-4/5 font-semibold tracking-wide ${adjustedSizeY > 1 ? "h-20" : "h-16"}`}
                     style={{ background: buttons[button], boxShadow: shadow_base }}
                 >
-                    <div className={` ${sizeY > 1 ? "text-3xl" : "text-lg"}`}>
+                    <div className={` ${adjustedSizeY > 1 ? "text-3xl" : "text-lg"}`}>
                     {buttonText}
                         
                     </div>
