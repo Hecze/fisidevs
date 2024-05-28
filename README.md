@@ -9,4 +9,3 @@ Los nuevos talentos que se unen a nuestra comunidad académica son piezas clave 
 
 Potenciar el talento de universitarios, egresados e interesados en Data Science, IA y Programación
 
-![](https://github.com/Hecze/Byte-el-perrobot/blob/main/Perrobot%20gift.gif)![](https://github.com/Hecze/Byte-el-perrobot/blob/main/Perrobot%20gift.gif)
