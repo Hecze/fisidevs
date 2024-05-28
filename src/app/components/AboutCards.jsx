@@ -62,7 +62,7 @@ const AboutCards = () => {
           </h1>
   
           <div className="flex gap-4 w-full flex-wrap max-w-full ml-4">
-            <Question text="¿Qué Necesito para estudiar con ustedes?" background="pink" className="flex-grow min-w-[300px]">
+            <Question text="¿Qué Necesito para empezar?" background="pink" className="flex-grow min-w-[300px]">
               <p className="text-sm">
                 Necesitas tener una computadora con acceso a internet y muchas ganas de aprender
               </p>

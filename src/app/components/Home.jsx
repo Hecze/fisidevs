@@ -7,7 +7,7 @@ const Home = () => {
         <div className="w-[387px] flex flex-row items-start justify-start pt-0 px-0 pb-[4.7px] box-border max-w-full text-lavender">
           <div className="flex-1 relative font-medium inline-block max-w-full z-[4] mq450:text-base">
             <p className="m-0">
-              Unete ya a la comunidad mas grande de latinoamnerica.
+              Unete ya a la comunidad mas grande de latinoamerica.
             </p>
           </div>
         </div>
