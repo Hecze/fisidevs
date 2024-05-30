@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { Button } from "@nextui-org/button";
+
 import {
     Modal,
     ModalContent,
@@ -9,6 +10,8 @@ import {
     ModalFooter,
     useDisclosure
 } from "@nextui-org/modal";
+
+
 
 interface QuestionProps {
     text?: string;
@@ -28,7 +31,7 @@ const Question: React.FC<QuestionProps> = ({
 
     const backgrounds = {
         blue: "linear-gradient(183.5deg, #013b77 14%, #012356)",
-        lightblue: "linear-gradient(180deg, #03c3ff, #1a70ce)",
+        lightblue: "linear-gradient(174deg, #36CFF1 0%, #0E7DCE 93%)",
         sky: "linear-gradient(174.27deg,#fdfffe42 5%,#b5fbfe 85%)",
         pink: "linear-gradient(174.48deg, #f47190 23%, #f47190 48%, #d41f43)",
         yellow: "linear-gradient(174.48deg, #fed358 26.5%, #fd9e45 81%)"
@@ -39,7 +42,7 @@ const Question: React.FC<QuestionProps> = ({
             <Button
                 onPress={onOpen}
                 className={`rounded-2xl text-white px-12 font-semibold tracking-wide h-14 text-lg ${className} max-w-90vw`}
-                style={{ background: backgrounds[background], boxShadow: shadow_base }}
+                style={{ background: backgrounds[background], boxShadow: shadow_base,  }}
             >
                 {text}
             </Button>

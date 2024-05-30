@@ -2,10 +2,17 @@ import React from 'react';
 import Card from "./Card";
 import Question from "./Question";
 import AboutCards from "./AboutCards";
+import { JetBrains_Mono } from 'next/font/google';
+
+const jetbrains = JetBrains_Mono({
+    weight: ['400', '500', '600', '700'],
+    subsets: ['latin'],
+  });
+
 
 const About = () => {
   return (
-    <div className="flex gap-8 mb-16">
+    <div className={"flex flex-wrap gap-8 mb-16 " + jetbrains.className}>
       <div className="flex flex-col justify-end">
         <img
           className="p-2 w-[58rem]"

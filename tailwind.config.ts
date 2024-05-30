@@ -11,6 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        "sky-gradient": 'linear-gradient(174deg, #36CFF1 0%, #0E7DCE 93%)',
         'maths-pattern': "url('/background.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
