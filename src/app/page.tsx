@@ -7,7 +7,7 @@ import About from "./components/About";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center  pr-20 pt-8 bg-sky-950 bg-[url('/background.png')] ">
+    <main className="flex min-h-screen flex-col items-center justify-center pt-8 bg-sky-950 bg-[url('/background.png')] ">
       <About />
     </main>
   );

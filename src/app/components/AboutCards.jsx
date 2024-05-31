@@ -13,26 +13,26 @@ const AboutCards = () => {
         Software Academy
       </h1>
       <CardContainer>
-        <Card button="yellow" background="sky" showButton={false} sizeX={2} sizeY={1}>
-          <div className="flex items-center gap-8">
-            <div className="rounded-full mt-4 w-[20rem] h-32 overflow-hidden [background:linear-gradient(180deg,#49f9fc,#0d5db8)]">
+        <Card button="yellow" background="sky" colSpan={2}>
+            <div className="flex flex-wrap md:flex-nowrap justify-center items-center lg:gap-8 mt-4">
               <img
-                className="relative bottom-0 inset-0 w-full h-auto object-cover rounded-full p-2"
+                className="rounded-full p-2 size-32"
                 alt="image"
-                src="/monigote1.png"
+                src="/monigote1.svg"
               />
+              <div className="flex flex-col gap-4 text-start mt-4">
+                <p className="text-sky-950 font-semibold text-sm">
+                  Somos una comunidad académica sin fines de lucro potenciando talento de universitarios, egresados e interesados en Data Science, IA y Programación
+                </p>
+                <b className="self-stretch relative text-blue-800">
+                  inicio de clases: 23/05/06
+                </b>
+              </div>
             </div>
-            <div className="flex flex-col gap-4 mt-6 text-start">
-              <p className="text-sky-950 font-semibold text-sm">
-                Somos una comunidad académica sin fines de lucro potenciando talento de universitarios, egresados e interesados en Data Science, IA y Programación
-              </p>
-              <b className="self-stretch relative text-blue-800">
-                inicio de clases: 23/05/06
-              </b>
-            </div>
-          </div>
+
+
         </Card>
-        <Card button="yellow" sizeX={1} sizeY={2}>
+        <Card button="yellow" rowSpan={2} buttonText='Unirse'>
           <div className="flex gap-2 ">
             <img
               className="w-40 h-40 p-2"
@@ -47,8 +47,8 @@ const AboutCards = () => {
             </div>
           </div>
         </Card>
-        <Card title="Cursos disponibles" sizeX={1} sizeY={1}/>
-        <Card title="Apoyar" background="lightblue" button="yellow" sizeX={1} sizeY={1}/>
+        <Card title="Cursos disponibles" buttonText='Unirse'/>
+        <Card title="Apoyar" background="lightblue" button="yellow" buttonText='Unirse'/>
       </CardContainer>
 
       <h1 className="text-3xl text-white font-semibold my-8 ml-4">

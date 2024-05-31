@@ -12,7 +12,7 @@ const jetbrains = JetBrains_Mono({
 
 const About = () => {
   return (
-    <div className={"flex flex-wrap gap-8 mb-16 " + jetbrains.className}>
+    <div className={"flex justify-center flex-wrap gap-8 mb-16" + jetbrains.className}>
       <div className="flex flex-col justify-end">
         <img
           className="p-2 w-[58rem]"

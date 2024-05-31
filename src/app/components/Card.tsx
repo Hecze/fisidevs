@@ -1,6 +1,5 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { Quicksand } from 'next/font/google';
+"use client";
+import React from 'react';
 import { Button } from "@nextui-org/button";
 
 interface CardProps {
@@ -8,52 +7,22 @@ interface CardProps {
     title?: string;
     button?: 'pink' | 'yellow';
     background?: 'blue' | 'lightblue' | 'sky';
-    showButton?: boolean;
     children?: React.ReactNode;
     className?: string;
-    sizeX?: 1 | 2 | 3;
-    sizeY?: 1 | 2 | 3;
+    colSpan?: 1 | 2 | 3;
+    rowSpan?: 1 | 2 | 3;
 }
 
 const Card: React.FC<CardProps> = ({
-    buttonText = "Unirse",
+    buttonText,
     button = 'pink',
     background = 'blue',
-    showButton = true,
     children,
     title,
     className,
-    sizeX = 1,
-    sizeY = 1
+    colSpan = 1,
+    rowSpan = 1
 }) => {
-    const [adjustedSizeX, setAdjustedSizeX] = useState(sizeX);
-    const [adjustedSizeY, setAdjustedSizeY] = useState(sizeY);
-
-    useEffect(() => {
-        const adjustSizes = () => {
-            const screenWidth = window.innerWidth;
-            let newSizeX = sizeX;
-            let newSizeY = sizeY;
-
-            if (screenWidth < 1024 && sizeX > 1) {
-                newSizeX = 1;
-                newSizeY = Math.min(sizeY + (sizeX - 1), 3) as 1 | 2 | 3;
-            } else if (screenWidth < 1440 && sizeX > 2) {
-                newSizeX = 2;
-                newSizeY = Math.min(sizeY + (sizeX - 2), 3) as 1 | 2 | 3;
-            }
-
-            setAdjustedSizeX(newSizeX);
-            setAdjustedSizeY(newSizeY);
-        };
-
-        adjustSizes();
-        window.addEventListener('resize', adjustSizes);
-
-        return () => {
-            window.removeEventListener('resize', adjustSizes);
-        };
-    }, [sizeX, sizeY]);
 
     const shadow_base = "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 1px #FFFFFF80 inset";
 
@@ -68,10 +37,16 @@ const Card: React.FC<CardProps> = ({
         sky: "linear-gradient(174.27deg,#fdfffe42 5%,#b5fbfe 85%)"
     };
 
-
     return (
         <div
-            className={`${className}  rounded-3xl  flex flex-col items-center justify-center  m-2  max-w-[96vw] col-span-${adjustedSizeX} row-span-${adjustedSizeY} p-6 px-8 `}
+            className={`
+                ${className}
+                rounded-3xl flex flex-col items-center 
+                justify-center
+                sm:col-span-1 md:col-span-${colSpan} lg:col-span-${colSpan}
+                sm:row-span-1 md:row-span-${rowSpan} lg:row-span-${rowSpan}
+                p-6 px-8 min-w-[22rem]
+            `}
             style={{ background: backgrounds[background], boxShadow: shadow_base }}
         >
             <div className="flex w-full flex-col items-center justify-center">
@@ -84,14 +59,13 @@ const Card: React.FC<CardProps> = ({
                     {children}
                 </div>
             </div>
-            {showButton && (
+            {buttonText && (
                 <Button
-                    className={`rounded-2xl text-white  font-semibold tracking-wide ${adjustedSizeY > 1 ? "h-20 w-3/4" : "h-14 w-3/5"}`}
+                    className={`rounded-2xl text-white font-semibold tracking-wide ${rowSpan > 1 ? "h-20 w-3/4" : "h-14 w-3/5"}`}
                     style={{ background: buttons[button], boxShadow: shadow_base }}
                 >
-                    <div className={` ${adjustedSizeY > 1 ? "text-3xl" : "text-lg"}`}>
-                    {buttonText}
-                        
+                    <div className={` ${rowSpan > 1 ? "text-3xl" : "text-lg"}`}>
+                        {buttonText}
                     </div>
                 </Button>
             )}
