@@ -6,7 +6,7 @@ import FAQSection from '../organism/FAQSection/FAQSection';
 
 const AboutGrid = () => {
   return (
-    <div className="flex flex-col max-w-[48rem] gap-6 px-6">
+    <div className="flex flex-col max-w-[48rem] gap-6">
       <CardsGrid />
       <FAQSection />
     </div>
