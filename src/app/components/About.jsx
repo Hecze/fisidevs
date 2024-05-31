@@ -7,20 +7,18 @@ const jetbrains = JetBrains_Mono({
     subsets: ['latin'],
   });
 
-
 const About = () => {
   return (
-    <div className={"flex justify-center flex-wrap gap-8 mb-16" + jetbrains.className}>
-      <div className="flex flex-col justify-end">
+    <div className={`flex flex-col-reverse md:flex-row justify-center flex-wrap gap-8  p-2 ${jetbrains.className}`}>
+      <div className="flex flex-col justify-end w-full md:w-auto pl-4 md:pl-0">
         <img
-          className="p-2 w-[58rem]"
+          className="p-2 w-[56rem] max-w-[90vw]"
           alt="image"
-          src="/fisichango.png"
+          src="/monogrande.svg"
         />
       </div>
-      <AboutGrid />
+      <AboutGrid className="w-full md:w-auto" />
     </div>
-
   );
 };
 
