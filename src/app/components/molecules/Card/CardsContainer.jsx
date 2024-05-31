@@ -1,7 +1,6 @@
 import React from 'react';
-import Card from "./Card";
 
-const CardContainer = ({ children }) => {
+const CardsContainer = ({ children }) => {
   return (
     <div className="grid gap-3 grid-flow-dense auto-rows-[11rem] w-full h-full " style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(23rem, 1fr))' }}>
       <div className="bg-blue-700 col-span-1 row-span-2 hidden"/>
@@ -13,4 +12,4 @@ const CardContainer = ({ children }) => {
   );
 };
 
-export default CardContainer;
+export default CardsContainer;

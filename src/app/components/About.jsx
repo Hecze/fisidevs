@@ -1,8 +1,6 @@
 import React from 'react';
-import Card from "./Card";
-import Question from "./Question";
-import AboutCards from "./AboutCards";
 import { JetBrains_Mono } from 'next/font/google';
+import AboutGrid from './templates/AboutGrid';
 
 const jetbrains = JetBrains_Mono({
     weight: ['400', '500', '600', '700'],
@@ -20,7 +18,7 @@ const About = () => {
           src="/fisichango.png"
         />
       </div>
-      <AboutCards />
+      <AboutGrid />
     </div>
 
   );
