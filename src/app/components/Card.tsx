@@ -43,9 +43,9 @@ const Card: React.FC<CardProps> = ({
                 ${className}
                 rounded-3xl flex flex-col items-center 
                 justify-center
-                sm:col-span-1 md:col-span-${colSpan} lg:col-span-${colSpan}
-                sm:row-span-1 md:row-span-${rowSpan} lg:row-span-${rowSpan}
                 p-6 px-8 min-w-[22rem]
+                col-span-1 row-span-${rowSpan + colSpan - 1}
+                md:col-span-${colSpan} md:row-span-${rowSpan}
             `}
             style={{ background: backgrounds[background], boxShadow: shadow_base }}
         >

@@ -29,8 +29,6 @@ const AboutCards = () => {
                 </b>
               </div>
             </div>
-
-
         </Card>
         <Card button="yellow" rowSpan={2} buttonText='Unirse'>
           <div className="flex gap-2 ">
@@ -55,7 +53,7 @@ const AboutCards = () => {
         Preguntas frecuentes
       </h1>
 
-      <div className="flex gap-4 w-full flex-wrap max-w-full ml-4">
+      <div className="flex gap-3 w-full flex-wrap max-w-full ml-4">
         <Question text="¿Qué Necesito para empezar?" background="pink" className="flex-grow min-w-[300px]">
           <p className="text-sm">
             Necesitas tener una computadora con acceso a internet y muchas ganas de aprender
