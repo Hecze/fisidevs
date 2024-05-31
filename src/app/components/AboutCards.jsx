@@ -13,7 +13,7 @@ const AboutCards = () => {
         Software Academy
       </h1>
       <CardContainer>
-        <Card button="yellow" background="sky" colSpan={2}>
+        <Card variant='sky' colSpan={2}>
             <div className="flex flex-wrap md:flex-nowrap justify-center items-center lg:gap-8 mt-4">
               <img
                 className="rounded-full p-2 size-32"
@@ -30,7 +30,7 @@ const AboutCards = () => {
               </div>
             </div>
         </Card>
-        <Card button="yellow" rowSpan={2} buttonText='Unirse'>
+        <Card variant='blue' rowSpan={2} buttonText='Unirse'>
           <div className="flex gap-2 ">
             <img
               className="w-40 h-40 p-2"
@@ -45,8 +45,8 @@ const AboutCards = () => {
             </div>
           </div>
         </Card>
-        <Card title="Cursos disponibles" buttonText='Unirse'/>
-        <Card title="Apoyar" background="lightblue" button="yellow" buttonText='Unirse'/>
+        <Card variant='blue+pink' title="Cursos disponibles" buttonText='Unirse'/>
+        <Card variant='lightblue' title="Apoyar"  buttonText='Unirse'/>
       </CardContainer>
 
       <h1 className="text-3xl text-white font-semibold my-8 ml-4">
