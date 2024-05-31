@@ -9,7 +9,7 @@ const jetbrains = JetBrains_Mono({
 
 const About = () => {
   return (
-    <div className={`flex flex-col-reverse md:flex-row justify-center flex-wrap gap-8  p-2 ${jetbrains.className}`}>
+    <div className={`flex flex-col-reverse md:flex-row justify-center flex-wrap gap-8  px-6 ${jetbrains.className}`}>
       <div className="flex flex-col justify-end w-full md:w-auto pl-4 md:pl-0">
         <img
           className="p-2 w-[56rem] max-w-[90vw]"

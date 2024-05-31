@@ -102,7 +102,7 @@ const Card: React.FC<CardProps> = ({
             className={`
                 ${className}
                 rounded-3xl flex flex-col items-center 
-                justify-center p-6 px-8 min-w-[22rem]
+                justify-center p-6 px-8 min-w-[20rem]
                 col-span-1 row-span-${rowSpan + colSpan - 1}
                 md:col-span-${colSpan} md:row-span-${rowSpan}
             `}

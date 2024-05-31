@@ -6,7 +6,7 @@ import Title from "../../atoms/Text/Title";
 
 const CardsGrid = () => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col w-full">
       <Subtitle text="FISIDEVS" />
       <Title text="Software Academy" />
       <CardsContainer>
