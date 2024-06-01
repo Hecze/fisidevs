@@ -2,14 +2,14 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="h-[14.5rem] min-[440px]:h-[22rem] sm:h-[25rem] md:h-[36rem] lg:h-[48rem] 2xl:h-screen w-full flex justify-center">
+    <div className="h-[14.5rem] min-[440px]:h-[22rem] sm:h-[25rem] md:h-[30rem] lg:h-[34rem] 2xl:h-[60rem] w-full flex justify-center">
       <img
-        className=" w-4/5 max-w-[90vw] z-20 absolute  lg:top-[-6rem]"
+        className=" w-4/5 max-w-[90vw] z-20 absolute  lg:top-[0rem] 2xl:top-[-7rem]"
         alt="image"
         src="/principal.svg"
       />
       <img
-        className=" w-full absolute top-[12rem] sm:top-[18rem]  2xl:top-[36rem] left-0 z-50"
+        className=" w-full absolute top-[12rem] sm:top-[18rem]  md:top-[22rem]  2xl:top-[36rem] left-0 z-50"
         alt="image"
         src="/diffuser2.svg"
       />
