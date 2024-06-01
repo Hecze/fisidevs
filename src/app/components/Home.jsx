@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="h-[14.5rem] min-[440px]:h-[22rem] sm:h-[25rem] md:h-[30rem] lg:h-[34rem] 2xl:h-[60rem] w-full flex justify-center">
       <img
-        className=" w-4/5 max-w-[90vw] z-20 absolute  lg:top-[0rem] 2xl:top-[-7rem]"
+        className=" w-4/5 z-20 mt-[-2rem] sm:mt-[-4rem] md:mt-[-6rem] 2xl:mt-[-10rem] "
         alt="image"
         src="/principal.svg"
       />
