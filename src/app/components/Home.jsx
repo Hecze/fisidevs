@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -14,7 +14,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-[45vw] xl:h-[62vw] 2xl:h-[45vw] w-full flex flex-col justify-center relative">
+    <div className="h-[36vw] sm:h-[42vw] xl:h-[62vw] 2xl:h-[45vw] w-full flex flex-col justify-center relative">
       <div className="w-full flex justify-center items-center">
         <div className={`w-3/4 z-20 ${isLoaded.principal ? 'animate-fade-in-down-20' : 'opacity-0'}`}>
           <Image
@@ -37,7 +37,7 @@ const Home = () => {
           onLoadingComplete={() => handleLoad('diffuser')}
         />
       </div>
-      <div className={`w-full h-[45vw] absolute top-0 left-0 z-10 ${isLoaded.items ? 'animate-fade-in-up-20' : 'opacity-0'}`}>
+      <div className={`w-[100vw] px-[4vw]  absolute top-[-5vw] left-0 z-10 ${isLoaded.items ? 'animate-fade-in-up-20' : 'opacity-0'}`}>
         <Image
           alt="items image"
           src="/items.svg"
