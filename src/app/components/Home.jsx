@@ -37,7 +37,7 @@ const Home = () => {
           onLoadingComplete={() => handleLoad('diffuser')}
         />
       </div>
-      <div className={`w-[100vw] px-[4vw]  absolute top-[-5vw] left-0 z-10 ${isLoaded.items ? 'animate-fade-in-up-20' : 'opacity-0'}`}>
+      <div className={`w-[99vw] px-[4vw]  absolute top-[-5vw] left-0 z-10 ${isLoaded.items ? 'animate-fade-in-up-20' : 'opacity-0'}`}>
         <Image
           alt="items image"
           src="/items.svg"
