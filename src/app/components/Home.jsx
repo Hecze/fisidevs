@@ -14,7 +14,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-[36vw] sm:h-[42vw] xl:h-[62vw] 2xl:h-[45vw] w-full flex flex-col justify-center relative">
+    <div className="h-[36vw] sm:h-[42vw] w-full flex flex-col justify-center relative">
       <div className="w-full flex justify-center items-center">
         <div className={`w-3/4 z-20 ${isLoaded.principal ? 'animate-fade-in-down-20' : 'opacity-0'}`}>
           <Image
