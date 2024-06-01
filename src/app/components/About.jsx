@@ -3,9 +3,9 @@ import { JetBrains_Mono } from 'next/font/google';
 import AboutGrid from './templates/AboutGrid';
 
 const jetbrains = JetBrains_Mono({
-    weight: ['400', '500', '600', '700'],
-    subsets: ['latin'],
-  });
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+});
 
 const About = () => {
   return (
@@ -16,6 +16,7 @@ const About = () => {
           alt="image"
           src="/monogrande.svg"
         />
+
       </div>
       <AboutGrid className="w-full md:w-auto" />
     </div>
