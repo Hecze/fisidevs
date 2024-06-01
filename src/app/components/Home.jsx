@@ -1,25 +1,52 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Home = () => {
+  const [isLoaded, setIsLoaded] = useState({
+    principal: false,
+    diffuser: false,
+    items: false,
+  });
+
+  const handleLoad = (imageName) => {
+    setIsLoaded((prev) => ({ ...prev, [imageName]: true }));
+  };
+
   return (
-    <div className=" h-[45vw] xl:h-[62vw] 2xl:h-[45vw] w-full flex flex-col justify-center">
-      <div className="w-full flex justify-center align-items-center">
-      <img
-        className=" w-3/4 z-20 animate-fade-in-down-20"
-        alt="image"
-        src="/principal.svg"
-      />
+    <div className="h-[45vw] xl:h-[62vw] 2xl:h-[45vw] w-full flex flex-col justify-center relative">
+      <div className="w-full flex justify-center items-center">
+        <div className={`w-3/4 z-20 ${isLoaded.principal ? 'animate-fade-in-down-20' : 'opacity-0'}`}>
+          <Image
+            alt="principal image"
+            src="/principal.svg"
+            layout="responsive"
+            width={1000}
+            height={1000}
+            onLoadingComplete={() => handleLoad('principal')}
+          />
+        </div>
       </div>
-      <img
-        className=" w-full mt-[-19vw]  z-50 "
-        alt="image"
-        src="/diffuser2.svg"
-      />
-      <img
-        className=" w-full h-[45vw]  absolute top-0 left-0 z-10 animate-fade-in-up-20"
-        alt="image"
-        src="/items.svg"
-      />
+      <div className={`w-full mt-[-19vw] z-50 ${isLoaded.diffuser ? 'animate-fade-in-up-20' : 'opacity-0'}`}>
+        <Image
+          alt="diffuser image"
+          src="/diffuser2.svg"
+          layout="responsive"
+          width={1000}
+          height={1000}
+          onLoadingComplete={() => handleLoad('diffuser')}
+        />
+      </div>
+      <div className={`w-full h-[45vw] absolute top-0 left-0 z-10 ${isLoaded.items ? 'animate-fade-in-up-20' : 'opacity-0'}`}>
+        <Image
+          alt="items image"
+          src="/items.svg"
+          layout="responsive"
+          width={1000}
+          height={1000}
+          onLoadingComplete={() => handleLoad('items')}
+        />
+      </div>
     </div>
   );
 };

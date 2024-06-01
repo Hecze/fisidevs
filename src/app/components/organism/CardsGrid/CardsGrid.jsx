@@ -3,6 +3,7 @@ import Card from "../../molecules/Card/Card";
 import CardsContainer from "../../molecules/Card/CardsContainer";
 import Subtitle from "../../atoms/Text/Subtitle";
 import Title from "../../atoms/Text/Title";
+import Image from 'next/image';
 
 const CardsGrid = () => {
   return (
@@ -25,8 +26,10 @@ const CardsGrid = () => {
 
 const CardContentOne = () => (
   <div className="flex flex-wrap md:flex-nowrap justify-center items-center lg:gap-8 mt-4">
-    <img
+    <Image
       className="rounded-full p-2 size-32"
+      width={100}
+      height={100}
       alt="image"
       src="/monigote1.svg"
     />
@@ -43,10 +46,12 @@ const CardContentOne = () => (
 
 const CardContentTwo = () => (
   <div className="flex gap-2">
-    <img
+    <Image
       className="w-40 h-40 p-2"
       alt="image"
       src="/monigote2.png"
+      width={100}
+      height={100}
     />
     <div className="flex flex-col text-start">
       <b className="text-xl">Comunidad</b>
