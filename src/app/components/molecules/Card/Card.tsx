@@ -105,6 +105,7 @@ const Card: React.FC<CardProps> = ({
                 justify-center p-6 px-8 min-w-[20rem]
                 col-span-1 row-span-${rowSpan + colSpan - 1}
                 md:col-span-${colSpan} md:row-span-${rowSpan}
+                
             `}
             style={{ background: styles?.background, boxShadow: shadowBase }}
         >
