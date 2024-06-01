@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="h-[42vw] w-full flex flex-col justify-center">
+    <div className=" h-[45vw] xl:h-[62vw] 2xl:h-[45vw] w-full flex flex-col justify-center">
       <div className="w-full flex justify-center align-items-center">
       <img
         className=" w-3/4 z-20 animate-fade-in-down-20"
@@ -10,7 +10,6 @@ const Home = () => {
         src="/principal.svg"
       />
       </div>
-
       <img
         className=" w-full mt-[-19vw]  z-50 "
         alt="image"

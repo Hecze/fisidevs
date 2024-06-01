@@ -24,7 +24,7 @@ const About = () => {
   }, [inView]);
 
   return (
-    <div className={`flex flex-col-reverse xl:flex-row xl:flex-nowrap justify-center gap-8 items-center px-4 ${jetbrains.className} mt-12 sm:mt-24`}>
+    <div className={`flex flex-col-reverse xl:flex-row xl:flex-nowrap justify-center gap-8 items-center px-4 ${jetbrains.className} mt-12 xl:mt-[-3rem] 2xl:mt-12`}>
       <div
         ref={ref}
         className={`flex flex-col items-center w-full xl:w-1/2 md:w-auto pl-4 md:pl-0 h-full transition-opacity duration-1000 ${isVisible ? 'opacity-100 animate-fade-in-down-10' : 'opacity-0'}`}
