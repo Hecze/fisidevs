@@ -9,16 +9,15 @@ const jetbrains = JetBrains_Mono({
 
 const About = () => {
   return (
-    <div className={`flex flex-col-reverse 2xl:flex-row justify-center flex-wrap gap-8  px-4 ${jetbrains.className}`}>
-      <div className="flex flex-col justify-end w-full md:w-auto pl-4 md:pl-0">
+    <div className={`flex flex-col-reverse xl:flex-row xl:flex-nowrap justify-center gap-8 items-center px-4 ${jetbrains.className} mt-12 sm:mt-24`}>
+      <div className="flex flex-col items-center w-full xl:w-1/2 md:w-auto pl-4 md:pl-0 h-full">
         <img
-          className="p-2 w-[42rem] xl:w-[56rem] max-w-[90vw]"
+          className="p-2 w-full hidden md:grid max-w-[45vw] mt-0 xl:mt-48 2xl:mt-12 "
           alt="image"
           src="/monogrande.svg"
         />
-
       </div>
-      <AboutGrid className="w-full md:w-auto" />
+      <AboutGrid className="md:w-auto xl:max-w-[42rem]" />
     </div>
   );
 };
